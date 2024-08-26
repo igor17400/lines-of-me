@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Electrical Engineer and Artificial Intelligence Research Scholar at The University of Tokyo."
+        />
+        <meta
+            property="og:image"
+            content="https://igorazevedo.com/foto_perfil_quadrada.jpg"
+        />
+        <meta name="author" content="Igor L.R. Azevedo" />
+        <title>Igor L.R. Azevedo - Linktree</title>
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            href="https://igorazevedo.com/igor_ico.svg"
+            type="image/x-icon"
+        />
+        <!-- Font Awesome icons -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        />
+        <!-- Core theme CSS -->
+        <style>
+            /* Background Image and Basic Styles */
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url("https://igorazevedo.com/bg_img.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Profile Picture */
+            #profilePicture {
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            #profilePicture img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+            }
+
+            /* Name Styling */
+            #userName {
+                font-size: 2.5em; /* Larger font size */
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            /* Content Styling */
+            #bio,
+            #userName,
+            #links {
+                text-align: center;
+                margin: 20px;
+            }
+
+            /* Bio Text Styling */
+            #bioText {
+                font-size: 1.8em; /* Increased font size */
+                line-height: 1.6; /* Improve readability */
+                margin: 20px 0; /* Add some space around the text */
+                text-align: center; /* Center the text */
+            }
+
+            /* Link (Button) Styling */
+            .link {
+                display: inline-block;
+                margin: 10px 0;
+                color: black;
+                text-decoration: none;
+                font-size: 1.2em;
+                background-color: rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                ); /* Greyish background */
+                opacity: 0.95; /* More opaque */
+                transition:
+                    opacity 0.3s ease,
+                    border-color 0.3s ease,
+                    background-color 0.3s ease,
+                    color 0.3s ease;
+                padding: 10px 20px;
+                border: 2px solid rgba(255, 255, 255, 0.8); /* Add border with slight transparency */
+                border-radius: 25px; /* Rounded corners */
+            }
+
+            .link:hover {
+                color: #00008b; /* Dark blue color on hover */
+                opacity: 1; /* Fully opaque on hover */
+                border-color: #00008b; /* Change border color to dark blue on hover */
+            }
+
+            /* Responsive Design */
+
+            /* For screens larger than 1080px */
+            @media only screen and (min-width: 1080px) {
+                #profilePicture img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                #bio,
+                #userName,
+                #links {
+                    margin: 30px;
+                    padding: 0 20px;
+                }
+
+                .link {
+                    font-size: 1.5em;
+                    margin: 15px 0;
+                }
+            }
+
+            /* For screens between 768px and 1079px */
+            @media only screen and (max-width: 1079px) and (min-width: 768px) {
+                #profilePicture img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                #bio,
+                #userName,
+                #links {
+                    margin: 20px;
+                    padding: 0 10px;
+                }
+
+                .link {
+                    font-size: 1.2em;
+                }
+            }
+
+            /* For screens between 480px and 767px */
+            @media only screen and (max-width: 767px) and (min-width: 480px) {
+                #profilePicture img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                #bio,
+                #userName,
+                #links {
+                    margin: 15px;
+                    padding: 0 10px;
+                }
+
+                .link {
+                    font-size: 1em;
+                }
+            }
+
+            /* For screens smaller than 480px */
+            @media only screen and (max-width: 479px) {
+                #profilePicture img {
+                    width: 120px; /* Increase size */
+                    height: 120px;
+                }
+
+                #bioText {
+                    font-size: 1.2em; /* Further reduce font size */
+                }
+
+                #bio,
+                #userName,
+                #links {
+                    margin: 10px;
+                    padding: 0 5px;
+                }
+
+                .link {
+                    font-size: 0.9em;
+                }
+            }
+
+            /* Custom Modal for Email Copying */
+            .custom-modal {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #003366;
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            }
+
+            .custom-modal.active {
+                display: block;
+            }
+
+            .modal-close {
+                margin-top: 10px;
+                padding: 5px 10px;
+                background-color: white;
+                color: #003366;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            /* Reference Style */
+            #reference {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 0.9em;
+                color: white;
+            }
+
+            #reference a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Language Toggle Button -->
+        <div style="text-align: right; padding: 10px">
+            <button onclick="toggleLanguage()" id="languageButton">
+                Português (Brasil)
+            </button>
+        </div>
+
+        <!-- Profile Picture -->
+        <a id="profilePicture">
+            <img
+                src="https://igorazevedo.com/foto_perfil_quadrada.jpg"
+                alt="Profile Picture"
+            />
+        </a>
+
+        <!-- Bio -->
+        <div id="userName">Igor L.R. Azevedo</div>
+        <div id="bio">
+            <p id="bioText">
+                Electrical Engineer from the University of Brasília, now a
+                Research Scholar at The University of Tokyo - focusing on
+                foundational models and recommender systems.
+            </p>
+        </div>
+        <div id="links">
+            <a class="link" href="https://me.igorazevedo.com" target="_blank"
+                ><i class="fa fa-globe">&nbsp;</i>Site
+            </a>
+            <a class="link" href="https://igorazevedo.com/blog" target="_blank"
+                ><i class="fas fa-pen-square">&nbsp;</i>Blog
+            </a>
+            <a
+                class="link"
+                href="https://www.linkedin.com/in/igor-lima-/"
+                target="_blank"
+                ><i class="fab fa-linkedin">&nbsp;</i>LinkedIn
+            </a>
+            <a class="link" href="https://github.com/igor17400" target="_blank"
+                ><i class="fab fa-github">&nbsp;</i>Github
+            </a>
+            <a
+                class="link"
+                href="javascript:void(0);"
+                onclick="copyToClipboard('igorlima1740@gmail.com')"
+                ><i class="fas fa-envelope">&nbsp;</i>igorlima1740@gmail.com
+            </a>
+        </div>
+
+        <!-- Reference for Background Image -->
+        <div id="reference">
+            Background image by
+            <a href="https://unsplash.com/@thandyung" target="_blank"
+                >Thandy Yung</a
+            >
+            on Unsplash
+        </div>
+
+        <!-- Custom Modal -->
+        <div id="emailModal" class="custom-modal">
+            Email address copied to clipboard!
+        </div>
+
+        <script>
+            let currentLanguage = "en"; // Default language
+
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(
+                    function () {
+                        showModal();
+                    },
+                    function (err) {
+                        console.error("Could not copy text: ", err);
+                    },
+                );
+            }
+
+            function showModal() {
+                const modal = document.getElementById("emailModal");
+                if (currentLanguage === "en") {
+                    modal.innerText = "Email address copied to clipboard!";
+                } else {
+                    modal.innerText =
+                        "Endereço de e-mail copiado para a área de transferência!";
+                }
+                modal.classList.add("active");
+                setTimeout(closeModal, 2000); // Automatically close after 2 seconds
+            }
+
+            function closeModal() {
+                document
+                    .getElementById("emailModal")
+                    .classList.remove("active");
+            }
+
+            function toggleLanguage() {
+                const bioText = document.getElementById("bioText");
+                const languageButton =
+                    document.getElementById("languageButton");
+
+                if (currentLanguage === "en") {
+                    // Switch to Portuguese
+                    bioText.innerText =
+                        "Engenheiro Eletricista pela Universidade de Brasília, atualmente Aluno Pesquisador na Universidade de Tóquio - focando em modelos de inteligência artificial e sistemas de recomendação.";
+                    languageButton.innerText = "English";
+                    currentLanguage = "pt";
+                } else {
+                    // Switch to English
+                    bioText.innerText =
+                        "Electrical Engineer from the University of Brasília, now a Research Scholar at The University of Tokyo - focusing on foundational models and recommender systems.";
+                    languageButton.innerText = "Português (Brasil)";
+                    currentLanguage = "en";
+                }
+            }
+        </script>
+    </body>
+</html>
