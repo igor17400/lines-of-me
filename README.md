@@ -1,40 +1,49 @@
-# Linktree Profile
+# Minimalist Personal Landing Page
 
-A customizable Linktree template for personal profiles, featuring a clean design with a background image, social media links, and a responsive layout. 
+A clean, responsive, and SEO-friendly personal landing page template. Showcase your bio, education, experience, projects, publications, and contact information in a modern, editorial style.
 
 ## Features
 
-- Responsive design that adapts to different screen sizes.
-- Customizable profile picture and name display.
-- Links to various social media profiles and personal websites.
-- Language toggle between English and Portuguese (Brazil).
-- Copy email address to clipboard functionality with a modal notification.
-- Credits to background image author.
+- Minimalist, typewriter/magazine-inspired design
+- Responsive layout for all devices
+- SEO-friendly static HTML structure
+- Modular sections: Bio, Education, Experience, Papers, Projects, Awards, Certifications, Skills, and Contact
+- Accessible and easy to navigate
+- Copy-to-clipboard email button
+- Customizable accent color and typography via CSS variables
+- Mobile-optimized navigation with hamburger menu
 
 ## Usage
 
-1. Clone the repository:
+1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/linktree-profile.git
+    git clone git@github.com:<username>/lines-of-me.git
     ```
 
-2. Modify the `index.html` file to personalize your profile:
-    - Update the profile picture URL.
-    - Modify the name, bio, and social media links.
-    - Customize the links to your personal websites or other profiles.
+2. **Personalize your landing page:**
+    - Edit `index.html` to update your name, bio, education, experience, projects, publications, and contact links.
+    - Replace the profile image in `assets/profile.jpg` with your own.
+    - Update or add links for your social media, blog, Google Scholar, and CV.
 
-3. Deploy the `index.html` to your preferred web hosting service.
+3. **Customize styles (optional):**
+    - Edit `styles.css` to change colors, fonts, or layout.
+    - All main styles are modular and use CSS variables for easy theming.
+
+4. **Deploy:**
+    - Upload the files to your preferred web hosting service (GitHub Pages, Vercel, Netlify, etc.).
 
 ## Customization
 
-- **Background Image**: Replace the `background-image` URL in the `<style>` section with your preferred image.
-- **Profile Picture**: Update the `src` attribute of the `<img>` tag inside the `<a id="profilePicture">` element.
-- **Links**: Modify the URLs and text for the links inside the `<div id="links">` section.
-- **Language Toggle**: The language toggle button switches between English and Portuguese. You can modify the text inside the `toggleLanguage` function in the `<script>` section to add more languages or customize the existing ones.
+- **Profile Image:** Replace `assets/profile.jpg` with your own photo.
+- **Accent Color & Fonts:** Adjust CSS variables in `styles.css` for a personalized look.
+- **Sections:** Add, remove, or reorder sections in `index.html` as needed.
+- **Contact Links:** Update the contact section with your preferred links and email.
+- **CV:** Place your PDF CV in the `assets/` folder and update the link in the contact section.
 
 ## Credits
 
-- **Background Image**: [Thandy Yung](https://unsplash.com/@thandyung) on Unsplash.
+- Icons: [Font Awesome](https://fontawesome.com/)
+- Design inspiration: Editorial, magazine, and minimalist web design
 
 ## License
 
