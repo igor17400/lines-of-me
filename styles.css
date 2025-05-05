@@ -63,10 +63,22 @@ body {
     transition: background var(--transition), color var(--transition);
 }
 
-#theme-toggle {
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     position: fixed;
-    top: var(--space-md);
-    right: var(--space-md);
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    background: none;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    height: 3.5em;
+}
+
+#theme-toggle {
     z-index: 1000;
     background: var(--secondary-bg);
     color: var(--accent);
@@ -88,7 +100,7 @@ nav {
     font-size: 0.98em;
     margin: 0.5em 0 1.5em 0;
     padding: 0.5em 1.2em 0.5em 1.2em;
-    background: none !important;
+    background: none;
     border: none !important;
     box-shadow: none !important;
     font-family: var(--font-main);
@@ -605,9 +617,6 @@ a:focus {
     background: var(--secondary-bg);
     border: 1.5px solid var(--border);
     border-radius: var(--radius-sm);
-    position: fixed;
-    top: 1em;
-    left: 1em;
     z-index: 2000;
     cursor: pointer;
     gap: 0.25em;
@@ -630,13 +639,14 @@ a:focus {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3.5em;
+        top: 0;
         left: 0;
-        width: 100vw;
+        width: 100vh;
         background: var(--primary-bg);
         border-bottom: 1px solid var(--border);
         z-index: 1500;
-        padding: 1em 0 0.5em 0;
+        padding: 3.5em 0 1.5em 1.5em;
+        margin: 0;
         box-shadow: 0 2px 8px var(--shadow);
     }
     nav.open {
