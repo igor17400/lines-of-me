@@ -388,7 +388,6 @@ li {
         text-align: center;
     }
     #nav-toggle {
-        outline: 2px solid red !important;
         z-index: 3000 !important;
     }
     nav {
@@ -777,5 +776,74 @@ a:focus {
 @media (max-width: 700px) {
     .contact-separator {
         display: none;
+    }
+}
+
+
+/* Hide mobile bio by default, show on mobile only */
+
+.bio-container-mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .bio-container {
+        display: none;
+    }
+    .bio-container-mobile {
+        display: block;
+        background: var(--bio-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: none;
+        max-width: 95vw;
+        margin: 1em auto 2em auto;
+        padding: 0.7em 0.7em 1.2em 0.7em;
+        font-family: var(--font-main);
+        color: var(--text);
+        font-size: 0.97em;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .img-name-container-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        margin: 0.7em 0 0.5em 0;
+    }
+    .profile-img-square-mobile {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 0;
+        margin-bottom: 0.3em;
+    }
+    .bio-name-stack-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2em;
+    }
+    .name-mobile {
+        font-size: 1.1em;
+        font-weight: 700;
+        color: var(--text);
+    }
+    .brief-details-mobile {
+        font-size: 0.97em;
+        color: var(--border);
+    }
+    .profile-summary-mobile {
+        font-size: 0.97em;
+        margin: 1em 0 0 0;
+        color: var(--text);
+    }
+    .contact-links-mobile {
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        justify-content: center;
     }
 }
