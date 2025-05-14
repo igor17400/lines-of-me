@@ -71,11 +71,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3000;
     background: none;
     padding: 0.5em 1em;
     box-sizing: border-box;
     height: 3.5em;
+    z-index: 2000;
 }
 
 #theme-toggle {
@@ -116,6 +116,8 @@ nav {
     min-height: unset;
     max-height: unset;
     scrollbar-width: thin;
+    position: relative;
+    z-index: 2500;
 }
 
 nav a {
@@ -797,7 +799,7 @@ a:focus {
         border-radius: 12px;
         box-shadow: none;
         max-width: 95vw;
-        margin: 1em auto 2em auto;
+        margin: 4em 2em 2em 2em;
         padding: 0.7em 0.7em 1.2em 0.7em;
         font-family: var(--font-main);
         color: var(--text);
@@ -846,4 +848,22 @@ a:focus {
         gap: 0.5em;
         justify-content: center;
     }
+}
+
+
+/* Add scroll margin to all sections */
+
+section,
+div[id] {
+    scroll-margin-top: 5em;
+    /* Adjust this value as needed */
+}
+
+
+/* Specific margin for bio sections */
+
+#bio,
+#bio-mobile {
+    scroll-margin-top: 6em;
+    /* Slightly larger margin for bio sections */
 }
