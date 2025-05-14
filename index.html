@@ -509,6 +509,24 @@
                 });
             });
         }
+
+        // Opaque navbar on scroll (desktop only)
+        function handleNavOpacity() {
+            const nav = document.querySelector('nav');
+            if (window.innerWidth > 700) { // Only on desktop
+                if (window.scrollY > 10) {
+                    nav.classList.add('opaque');
+                } else {
+                    nav.classList.remove('opaque');
+                }
+            } else {
+                nav.classList.remove('opaque'); // Always transparent on mobile
+            }
+        }
+
+        window.addEventListener('scroll', handleNavOpacity);
+        window.addEventListener('resize', handleNavOpacity);
+        document.addEventListener('DOMContentLoaded', handleNavOpacity);
     </script>
 </body>
 
